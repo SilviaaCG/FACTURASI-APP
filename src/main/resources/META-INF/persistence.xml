@@ -1,0 +1,17 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd" version="2.0">
+    <persistence-unit name="facturasi" transaction-type="RESOURCE_LOCAL">
+        <class>org.facturasi.Cliente</class>
+        <class>org.facturasi.Factura</class>
+
+
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" />
+            <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver" />
+            <property name="hibernate.connection.username" value="root" />
+            <property name="hibernate.connection.password" value="1234" />
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/facturasi" />
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+            <property name="hibernate.show_sql" value="true" />
+        </properties>
+    </persistence-unit>
+</persistence>

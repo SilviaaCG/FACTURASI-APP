@@ -1,0 +1,26 @@
+21-11-2023 22:55:31 INFO  ModoPagoDao:29 - Se ha guardado un nuevo modo de pago llamado: efectivo
+21-11-2023 22:55:31 INFO  ModoPagoDao:29 - Se ha guardado un nuevo modo de pago llamado: tarjeta visa
+21-11-2023 22:55:31 INFO  CategoriaDao:29 - Se ha guardado una nueva categoria con el nombre: Tarjetas graficas
+21-11-2023 22:55:31 INFO  CategoriaDao:29 - Se ha guardado una nueva categoria con el nombre: Procesadores
+21-11-2023 22:55:31 INFO  ProductoDao:30 - Se ha guardado un nuevo producto con el nombre: Tarjeta gráfica RTX3060
+21-11-2023 22:55:31 INFO  ProductoDao:30 - Se ha guardado un nuevo producto con el nombre: Procesador Intel9 10343
+21-11-2023 22:55:31 INFO  ClienteDao:30 - Se ha guardado un nuevo cliente con el id 4
+21-11-2023 22:55:31 INFO  FacturaDao:29 - Se ha guardado una nueva factura del cliente Greis.
+Número de factura: 7
+21-11-2023 22:55:31 INFO  FacturaDao:29 - Se ha guardado una nueva factura del cliente Greis.
+Número de factura: 8
+21-11-2023 22:55:31 INFO  DetalleDao:30 - Se ha guardado un nuevo detalle del producto Tarjeta gráfica RTX3060 a la factura número 7
+21-11-2023 22:55:32 INFO  DetalleDao:30 - Se ha guardado un nuevo detalle del producto Procesador Intel9 10343 a la factura número 7
+21-11-2023 23:02:54 INFO  ModoPagoDao:29 - Se ha guardado un nuevo modo de pago llamado: efectivo
+21-11-2023 23:02:55 INFO  ModoPagoDao:29 - Se ha guardado un nuevo modo de pago llamado: tarjeta visa
+21-11-2023 23:02:55 INFO  CategoriaDao:29 - Se ha guardado una nueva categoria con el nombre: Tarjetas graficas
+21-11-2023 23:02:55 INFO  CategoriaDao:29 - Se ha guardado una nueva categoria con el nombre: Procesadores
+21-11-2023 23:02:55 INFO  ProductoDao:30 - Se ha guardado un nuevo producto con el nombre: Tarjeta gráfica RTX3060
+21-11-2023 23:02:55 INFO  ProductoDao:30 - Se ha guardado un nuevo producto con el nombre: Procesador Intel9 10343
+21-11-2023 23:02:55 INFO  ClienteDao:30 - Se ha guardado un nuevo cliente con el id 5
+21-11-2023 23:02:55 INFO  FacturaDao:29 - Se ha guardado una nueva factura del cliente Greis.
+Número de factura: 9
+21-11-2023 23:02:55 INFO  FacturaDao:29 - Se ha guardado una nueva factura del cliente Greis.
+Número de factura: 10
+21-11-2023 23:02:55 INFO  DetalleDao:30 - Se ha guardado un nuevo detalle del producto Tarjeta gráfica RTX3060 a la factura número 9
+21-11-2023 23:02:55 INFO  DetalleDao:30 - Se ha guardado un nuevo detalle del producto Procesador Intel9 10343 a la factura número 9
