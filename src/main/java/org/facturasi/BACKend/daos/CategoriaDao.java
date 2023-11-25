@@ -38,7 +38,7 @@ public class CategoriaDao {
     }
     public List<Categoria> listarCategoria(){
         setUp();
-        List<Categoria> categorias = em.createQuery("SELECT f FROM f",Categoria.class).getResultList();
+        List<Categoria> categorias = em.createQuery("SELECT c FROM Categoria c",Categoria.class).getResultList();
         close();
         return categorias;
     }

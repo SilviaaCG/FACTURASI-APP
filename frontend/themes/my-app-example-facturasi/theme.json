@@ -1,0 +1,9 @@
+{
+  "lumoImports" : [ "typography", "color", "spacing", "badge", "utility" ],
+  "assets" : {
+    "@fontsource/crushed" : {
+      "*.css" : "@fontsource/crushed",
+      "files/*" : "@fontsource/crushed/files"
+    }
+  }
+}

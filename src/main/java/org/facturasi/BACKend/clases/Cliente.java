@@ -1,7 +1,9 @@
 package org.facturasi.BACKend.clases;
 
 import javax.persistence.*;
+import java.awt.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -10,18 +12,30 @@ public class Cliente implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_cliente")
     private int idCliente;
+    String image;
 
     private String nombre;
 private  String apellidos;
 private String direccion;
 private  String correo;
 private int telefono;
-@OneToMany(mappedBy = "cliente")
+@OneToMany(mappedBy = "cliente", fetch = FetchType.EAGER,cascade = CascadeType.REMOVE )
 transient private List<Factura> facturas;
 
 public Cliente() {
 
 }
+
+    public Cliente( String image, String nombre, String apellidos, String direccion, String correo, int telefono) {
+        this.idCliente = 0;
+        this.image = image;
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.direccion = direccion;
+        this.correo = correo;
+        this.telefono = telefono;
+        this.facturas = new ArrayList<>();
+    }
 
     public int getIdCliente() {
         return idCliente;
@@ -29,6 +43,14 @@ public Cliente() {
 
     public void setIdCliente(int idCliente) {
         this.idCliente = idCliente;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public String getNombre() {

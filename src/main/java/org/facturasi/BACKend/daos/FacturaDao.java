@@ -38,8 +38,10 @@ public class FacturaDao {
     }
     public List<Factura> listarFacturas(){
         setUp();
-        List<Factura> facturas = em.createQuery("SELECT f FROM f",Factura.class).getResultList();
+        List<Factura> facturas = em.createQuery("SELECT f FROM Factura f",Factura.class).getResultList();
         close();
+
         return facturas;
+
     }
 }

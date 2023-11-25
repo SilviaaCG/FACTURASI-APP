@@ -1,6 +1,7 @@
 package org.facturasi.BACKend.clases;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -10,6 +11,7 @@ public class Producto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_producto")
     private int idProducto;
+    private String imageURL;
     private String nombre;
     private double precio;
     private int stock;
@@ -21,6 +23,16 @@ public class Producto {
 
     public Producto(){
 
+    }
+
+    public Producto(String imageURL, String nombre, double precio, int stock, Categoria categoria) {
+        this.idProducto = 0;
+        this.imageURL = imageURL;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.stock = stock;
+        this.categoria = categoria;
+        this.detalles = new ArrayList<>();
     }
 
     public int getIdProducto() {
@@ -61,5 +73,12 @@ public class Producto {
 
     public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
+    }
+
+    public String getImageURL() {
+        return imageURL;
+    }
+    public void setImageURL(String imageURL) {
+        this.imageURL = imageURL;
     }
 }

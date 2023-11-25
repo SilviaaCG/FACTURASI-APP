@@ -1,14 +1,23 @@
 package org.facturasi.BACKend;
 
+import com.itextpdf.io.font.constants.StandardFonts;
+import com.itextpdf.kernel.font.PdfFont;
+import com.itextpdf.kernel.font.PdfFontFactory;
+import com.itextpdf.kernel.pdf.PdfDocument;
+import com.itextpdf.kernel.pdf.PdfWriter;
+import com.itextpdf.layout.Document;
+import com.itextpdf.layout.element.Paragraph;
+import com.itextpdf.layout.properties.TextAlignment;
 import org.facturasi.BACKend.clases.*;
 import org.facturasi.BACKend.daos.*;
 
+import java.io.IOException;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         //Inicializo los daos
         ModoPagoDao mpd = new ModoPagoDao();
         FacturaDao fd = new FacturaDao();
@@ -17,6 +26,8 @@ public class Main {
         ProductoDao pd = new ProductoDao();
         CategoriaDao catd = new CategoriaDao();
 
+
+
     //CLIENTE
     Cliente cliente = new Cliente();
     cliente.setNombre("Greis");
@@ -24,6 +35,7 @@ public class Main {
     cliente.setDireccion("callegreis");
     cliente.setCorreo("greis@gmail.com");
     cliente.setTelefono(322441);
+    cliente.setImage("https://cdn.pixabay.com/photo/2023/11/10/20/32/duck-8380065_1280.jpg");
 
     //Lista para las facturas de la Clase Cliente
     List<Factura> facturas = new ArrayList<>();
@@ -99,5 +111,40 @@ public class Main {
         fd.guardarFactura(factura2);
         dd.guardarDetalle(detalle1);
         dd.guardarDetalle(detalle2);
+
+        //cd.eliminarCliente(cliente);
+        // Generar el PDF
+        String file = "C:\\Users\\silvia\\Downloads\\sample_pdf.pdf";
+        createPdf(file);
+        /**
+    List<Cliente> clientes = new ArrayList<>();
+    clientes = cd.listarClientes();
+    for (Cliente cliente: clientes){
+        System.out.println(cliente.getIdCliente());
+    }*/
+
     }
+
+    private static void createPdf(String file) throws IOException {
+        PdfWriter writer = new PdfWriter(file) ;
+        PdfDocument pdfDoc = new PdfDocument(writer);
+        Document doc = new Document(pdfDoc);
+        PdfFont myFont = PdfFontFactory.createFont(StandardFonts.TIMES_ROMAN);
+
+        Paragraph p1 = new Paragraph();
+        p1.add("Hello, This is Delftstack!");
+        p1.setTextAlignment(TextAlignment.CENTER);
+        p1.setFont(myFont);
+        p1.setFontSize(28);
+        doc.add(p1);
+
+        Paragraph p2 = new Paragraph();
+        p2.add("We help you understand the concepts.");
+        p2.setFontSize(18);
+        doc.add(p2);
+
+        doc.close();
+    }
+
+
 }

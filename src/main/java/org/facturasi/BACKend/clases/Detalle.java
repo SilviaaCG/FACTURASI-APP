@@ -20,6 +20,14 @@ private double precioTotal;
 public Detalle(){
 }
 
+    public Detalle(Factura factura, Producto producto, int cantidad) {
+        this.numDetalle = 0;
+        this.factura = factura;
+        this.producto = producto;
+        this.cantidad = cantidad;
+        this.precioTotal = producto.getPrecio()*cantidad;
+    }
+
     public int getNumDetalle() {
         return numDetalle;
     }

@@ -26,6 +26,9 @@ public class ProductoDao {
     }
     public void guardarProducto(Producto producto){
         setUp();
+        if (producto.getIdProducto() != 0 ) {
+            producto = em.merge(producto);
+        }
         em.persist(producto);
         LOGGER.info("Se ha guardado un nuevo producto con el nombre: " + producto.getNombre());
         close();
@@ -39,7 +42,7 @@ public class ProductoDao {
     }
     public List<Producto> listarProductos(){
         setUp();
-        List<Producto> productos = em.createQuery("SELECT f FROM f",Producto.class).getResultList();
+        List<Producto> productos = em.createQuery("SELECT p FROM Producto p",Producto.class).getResultList();
         close();
         return productos;
     }

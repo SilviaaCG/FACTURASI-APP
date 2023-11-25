@@ -3,6 +3,7 @@ package org.facturasi.BACKend.clases;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -11,12 +12,12 @@ public class Factura implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "num_factura")
     private int numFactura;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_cliente")
     private Cliente cliente;
     @Column(name = "fecha_creacion")
     private Timestamp fechaCreacion;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "num_pago")
     private ModoPago numPago;
     @OneToMany(mappedBy = "factura")
@@ -24,6 +25,14 @@ public class Factura implements Serializable {
 
     public Factura(){
 
+    }
+
+    public Factura( Cliente cliente, ModoPago numPago) {
+        this.numFactura = 0;
+        this.cliente = cliente;
+        this.fechaCreacion = new Timestamp(System.currentTimeMillis());
+        this.numPago = numPago;
+        this.detalles = new ArrayList<>();
     }
 
     public int getNumFactura() {
@@ -64,5 +73,8 @@ public class Factura implements Serializable {
 
     public void setDetalles(List<Detalle> detalles) {
         this.detalles = detalles;
+    }
+    public void addDetalles(Detalle detalle){
+        getDetalles().add(detalle);
     }
 }
