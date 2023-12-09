@@ -5,13 +5,7 @@ package org.facturasi.FRONTend.views;
 
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.applayout.AppLayout;
-import com.vaadin.flow.component.html.Div;
-import com.vaadin.flow.component.html.H1;
-import com.vaadin.flow.component.html.Header;
-import com.vaadin.flow.component.html.ListItem;
-import com.vaadin.flow.component.html.Nav;
-import com.vaadin.flow.component.html.Span;
-import com.vaadin.flow.component.html.UnorderedList;
+import com.vaadin.flow.component.html.*;
 import com.vaadin.flow.component.icon.Icon;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.router.RouterLink;
@@ -82,11 +76,15 @@ public class MainLayout extends AppLayout {
         Div layout = new Div();
         layout.addClassNames(Display.FLEX, AlignItems.CENTER, Padding.Horizontal.LARGE);
 
-        H1 appName = new H1("FacturaSi");
-        appName.getStyle().set("1000", "var(--lumo-font-size-l)")
-                .set("fontsize", "50px");
-        appName.addClassNames(Margin.Vertical.MEDIUM, Margin.End.AUTO, FontSize.LARGE);
-        layout.add(appName);
+        H1 title = new H1("FacturaSi");
+        title.getStyle().set("10", "var(--lumo-font-size-l)").set("margin", "0").set("margin", "var(--lumo-space-m)").
+                set("--lumo-font-size-xxl", "4rem").set("text-shadow","2px 2px 5px #3498DB");
+        Image logo = new Image("https://cdn-icons-png.flaticon.com/128/4166/4166029.png","Logo");
+        logo.setHeight("40px");
+        logo.setWidth("40px");
+        logo.getStyle().setMargin("10px");
+        title.addClassNames(Margin.Vertical.MEDIUM, Margin.End.AUTO);
+        layout.add(title,logo);
 
         Nav nav = new Nav();
         nav.addClassNames(Display.FLEX, Overflow.AUTO, Padding.Horizontal.MEDIUM, Padding.Vertical.XSMALL);
@@ -113,9 +111,6 @@ public class MainLayout extends AppLayout {
 
                 new MenuItemInfo("Clientes", LumoIcon.USER.create(), ClienteView.class),
 
-                new MenuItemInfo("Checkout Form", LumoIcon.PHOTO.create(), MainView.class),
-
-                new MenuItemInfo("Grid with Filters", LumoIcon.PHOTO.create(), MainView.class),
 
         };
     }

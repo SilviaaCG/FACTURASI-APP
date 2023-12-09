@@ -14,6 +14,7 @@ import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.notification.NotificationVariant;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.component.textfield.EmailField;
 import com.vaadin.flow.component.textfield.IntegerField;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.renderer.ComponentRenderer;
@@ -25,11 +26,12 @@ import org.facturasi.BACKend.clases.Cliente;
 import org.facturasi.BACKend.clases.Factura;
 import org.facturasi.BACKend.daos.ClienteDao;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
+
 
 @PageTitle("ClienteView")
-@Route(value = "ClienteView", layout = MainLayout.class)
+@Route(value = "", layout = MainLayout.class)
 public class ClienteView extends VerticalLayout {
     // LISTAS
     private List<Cliente> clientes;
@@ -46,7 +48,7 @@ public class ClienteView extends VerticalLayout {
     private TextField nombreField;
     private TextField apellidosField;
     private TextField direccionField;
-    private TextField correoField;
+    private EmailField correoField;
     private IntegerField telfField;
 
 
@@ -60,6 +62,7 @@ public class ClienteView extends VerticalLayout {
         // CARGA
         try {
             //Cargo los clientes de la base de datos
+            clientes = new ArrayList<>();
             clientes = cd.listarClientes();
         } catch (Exception e) {
             Notification notification = Notification.show("Error al cargar los clientes.");
@@ -89,7 +92,9 @@ public class ClienteView extends VerticalLayout {
 
     private Grid<Cliente> crearTablaClientes(VerticalLayout panelCrearModificarClientes) {
         Grid<Cliente> tablaCliente = new Grid<>(Cliente.class, false);
-        tablaCliente.setItems(clientes);
+
+            tablaCliente.setItems(clientes);
+
         tablaCliente.addColumn(Cliente::getIdCliente).setHeader("ID");
         tablaCliente.addColumn(createAvatarRenderer()).setHeader("Imagen").setAutoWidth(true).setFlexGrow(0);
         tablaCliente.addColumn(Cliente::getNombre).setHeader("Nombre");
@@ -179,13 +184,12 @@ public class ClienteView extends VerticalLayout {
         imageUrlField = new TextField("URL de imagen");
         apellidosField = new TextField("Apellido");
         direccionField = new TextField("Dirección");
-        correoField = new TextField("Correo electrónico");
+        correoField = new EmailField("Correo electrónico");
         telfField = new IntegerField("Número de teléfono");
         formularioCrearClientes.add(idField, imageUrlField, nombreField, apellidosField, direccionField, correoField, telfField);
         aceptarModificacionCreacionButton.addClickListener(click -> {
             if (editable == true) {
                 try {
-
                     cliente.setNombre(nombreField.getValue());
                     cliente.setApellidos(apellidosField.getValue());
                     cliente.setDireccion(direccionField.getValue());

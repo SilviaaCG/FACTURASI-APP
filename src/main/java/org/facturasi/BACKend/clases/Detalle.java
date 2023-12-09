@@ -1,16 +1,19 @@
 package org.facturasi.BACKend.clases;
 
 import javax.persistence.*;
+import java.io.Serializable;
+import java.util.Objects;
+
 @Entity
-public class Detalle {
+public class Detalle implements Serializable {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 @Column(name = "num_detalle")
 private int numDetalle;
-@ManyToOne
+@ManyToOne(fetch = FetchType.EAGER)
 @JoinColumn(name = "id_factura")
 private Factura factura;
-@ManyToOne
+@ManyToOne(fetch = FetchType.EAGER)
 @JoinColumn(name = "id_producto")
 private Producto producto;
 private int cantidad;
@@ -66,5 +69,18 @@ public Detalle(){
 
     public void setPrecioTotal(double precioTotal) {
         this.precioTotal = precioTotal;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Detalle detalle = (Detalle) o;
+        return numDetalle == detalle.numDetalle && cantidad == detalle.cantidad && Double.compare(detalle.precioTotal, precioTotal) == 0 && factura.equals(detalle.factura) && producto.equals(detalle.producto);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(numDetalle, factura, producto, cantidad, precioTotal);
     }
 }

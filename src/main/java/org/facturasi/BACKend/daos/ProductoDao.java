@@ -14,17 +14,17 @@ public class ProductoDao {
     private static EntityManager em;
     private  static EntityManagerFactory emf;
     private static final Logger LOGGER = Logger.getLogger(ProductoDao.class);
-    private void setUp(){
+    private static void setUp(){
         PropertyConfigurator.configure("src/main/resources/application.properties");
         emf = Persistence.createEntityManagerFactory("facturasi");
         em = emf.createEntityManager();
         em.getTransaction().begin();
     }
-    private void close(){
+    private static void close(){
         em.getTransaction().commit();
         em.close();
     }
-    public void guardarProducto(Producto producto){
+    public static void guardarProducto(Producto producto){
         setUp();
         if (producto.getIdProducto() != 0 ) {
             producto = em.merge(producto);
@@ -33,14 +33,14 @@ public class ProductoDao {
         LOGGER.info("Se ha guardado un nuevo producto con el nombre: " + producto.getNombre());
         close();
     }
-    public void eliminarProducto(Producto producto){
+    public static void eliminarProducto(Producto producto){
         setUp();
         producto = em.merge(producto);
         em.remove(producto);
         LOGGER.info("Se ha eliminado la categoria con el nombre: " + producto.getNombre());
         close();
     }
-    public List<Producto> listarProductos(){
+    public static List<Producto> listarProductos(){
         setUp();
         List<Producto> productos = em.createQuery("SELECT p FROM Producto p",Producto.class).getResultList();
         close();

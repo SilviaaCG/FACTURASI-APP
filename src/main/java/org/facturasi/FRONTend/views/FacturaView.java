@@ -6,8 +6,8 @@ import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.formlayout.FormLayout;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.grid.GridVariant;
-import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H1;
+import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.icon.Icon;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.notification.Notification;
@@ -16,13 +16,15 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.select.Select;
 import com.vaadin.flow.component.textfield.IntegerField;
-import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.renderer.ComponentRenderer;
+import com.vaadin.flow.data.renderer.TextRenderer;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
+import com.vaadin.flow.router.RouterLink;
 import org.facturasi.BACKend.clases.*;
-import org.facturasi.BACKend.daos.DetalleDao;
-import org.facturasi.BACKend.daos.FacturaDao;
+import org.facturasi.BACKend.daos.*;
+import org.facturasi.BACKend.enumerados.ModoPago;
+
 
 import java.util.List;
 
@@ -39,10 +41,14 @@ public class FacturaView extends VerticalLayout {
     //DAOs
     private FacturaDao fd = new FacturaDao();
     private DetalleDao dd = new DetalleDao();
+    private ClienteDao cd = new ClienteDao();
 
 
     //Listas
     private List<Factura> facturas;
+
+    private List<Cliente> clientes;
+
     private Grid<Factura> tablaFactura;
 
     //Campos de formulario
@@ -65,6 +71,8 @@ public FacturaView(){
     try {
         //Cargo las facturas de la base de datos
         facturas = fd.listarFacturas();
+        clientes = cd.listarClientes();
+
     } catch (Exception e) {
         Notification notification = Notification.show("Error al cargar las facturas.");
         notification.addThemeVariants(NotificationVariant.LUMO_ERROR);
@@ -77,10 +85,11 @@ public FacturaView(){
     HorizontalLayout panelButtons = new HorizontalLayout();
     panelButtons = panelButtons(panelCrearModificarFacturas);
 
+
     tablaFactura = crearTablaFactura(panelCrearModificarFacturas);
 
 
-    add(title1, panelButtons, panelCrearModificarFacturas,tablaFactura );
+    add(title1, panelButtons, panelCrearModificarFacturas,tablaFactura);
     panelCrearModificarFacturas.setVisible(false);
     panelButtons.setVisible(true);
 
@@ -113,37 +122,37 @@ public FacturaView(){
 
             buttonEliminar.setIcon(new Icon(VaadinIcon.TRASH));
         })).setHeader("Eliminar");
-        tablaFactura.addColumn(new ComponentRenderer<>(Button::new, (buttonEditar, facturaGrid) -> {
-            buttonEditar.addThemeVariants(ButtonVariant.LUMO_TERTIARY);
-            buttonEditar.addClickListener(e -> {
+        tablaFactura.addColumn(new ComponentRenderer<>(RouterLink::new, (linkFichaFactura, facturaGrid) -> {
 
-                try {
-                    factura = facturaGrid;
-                    //LLENAR CAMPOS DE FORMULARIO
-                    /**imageUrlField.setValue(cliente.getImage());
-                    nombreField.setValue(cliente.getNombre());
-                    apellidosField.setValue(cliente.getApellidos());
-                    direccionField.setValue(cliente.getDireccion());
-                    correoField.setValue(cliente.getCorreo());
-                    telfField.setValue(cliente.getTelefono());
-                    */
-                    editable = true;
-                    panelCrearModificarFacturas.setVisible(true);
-
-                } catch (Exception e1) {
-                    Notification notification = Notification.show("No se puede editar.\nEditable = " + editable);
-                    notification.addThemeVariants(NotificationVariant.LUMO_ERROR);
-                    e1.printStackTrace();
-                }
-                actualizarTabla(panelCrearModificarFacturas);
-
-            });
-            buttonEditar.setIcon(new Icon(VaadinIcon.EDIT));
+            linkFichaFactura.add(new Span("+info"));
+            linkFichaFactura.setRoute(FacturaFichaView.class, facturaGrid.getNumFactura());
+            linkFichaFactura.setTabIndex(-1);
+            linkFichaFactura.getStyle().set("color", "blue");
         })).setHeader("Editar");
-
+        tablaFactura.addComponentColumn(factura -> createStatusIcon(factura.isPagado()))
+                .setTooltipGenerator(factura -> String.valueOf(factura.isPagado()))
+                .setHeader("Pagado");
 
         return tablaFactura;
     }
+
+
+
+
+    private Icon createStatusIcon(boolean status) {
+        boolean isAvailable = status;
+        Icon icon;
+        if (isAvailable) {
+            icon = VaadinIcon.CHECK.create();
+            icon.getElement().getThemeList().add("badge success");
+        } else {
+            icon = VaadinIcon.CLOSE_SMALL.create();
+            icon.getElement().getThemeList().add("badge error");
+        }
+        icon.getStyle().set("padding", "var(--lumo-space-xs");
+        return icon;
+    }
+
 
     private void eliminarFactura(Factura facturaGrid) {
         try {
@@ -178,8 +187,14 @@ public FacturaView(){
         idFacturaField = new IntegerField("ID");
         idFacturaField.setVisible(false);
         clienteSelect = new Select<>();
+        if(clientes!=null){
+            clienteSelect.setItems(clientes);
+        }
+        clienteSelect.setRenderer(new TextRenderer<>(Cliente::getNombre));
         clienteSelect.setLabel("Cliente");
         modoPagoSelect = new Select<>();
+        modoPagoSelect.setItems(ModoPago.values());
+        modoPagoSelect.setRenderer(new TextRenderer<>(ModoPago::getNombre));
         modoPagoSelect.setLabel("Modo de pago");
         //En detalle
         idDetalleField = new IntegerField();
@@ -191,7 +206,7 @@ public FacturaView(){
         cantidadField.setMin(1);
         //cantidadField.setMax(producto.getStock());
 
-        formularioCrearFacturas.add(idFacturaField, clienteSelect, modoPagoSelect, idDetalleField, productoSelect, cantidadField);
+        formularioCrearFacturas.add(idFacturaField, clienteSelect, modoPagoSelect);
 
         aceptarModificacionCreacionButton.addClickListener(click -> {
             if (editable == true) {
@@ -201,13 +216,6 @@ public FacturaView(){
                     factura.setNumPago(modoPagoSelect.getValue());
                     fd.guardarFactura(factura);
                     facturas = fd.listarFacturas();
-
-                    /**detalle.setFactura(factura);
-                    detalle.setProducto(productoSelect.getValue());
-                    detalle.setCantidad(cantidadField.getValue());
-                    dd.guardarDetalle(detalle);
-
-                    factura.addDetalles(detalle);*/
                     actualizarTabla(panelCrearModificarFacturas);
 
                     Notification notification = Notification.show("Factura modificado correctamente");
@@ -224,10 +232,10 @@ public FacturaView(){
                     fd.guardarFactura(factura);
                     facturas.add(factura);
                     actualizarTabla(panelCrearModificarFacturas);
-                    Notification notification = Notification.show("Cliente creado correctamente :)");
+                    Notification notification = Notification.show("Factura creada correctamente :)");
                     notification.addThemeVariants(NotificationVariant.LUMO_SUCCESS);
                 } catch (Exception exceptionCrearPelicula) {
-                    Notification notification = Notification.show("Error al crear el cliente");
+                    Notification notification = Notification.show("Error al crear la factura");
                     notification.addThemeVariants(NotificationVariant.LUMO_ERROR);
                 }
 

@@ -26,10 +26,9 @@ import com.vaadin.flow.data.renderer.ComponentRenderer;
 import com.vaadin.flow.dom.ElementFactory;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
-import org.facturasi.BACKend.clases.Categoria;
 import org.facturasi.BACKend.clases.Producto;
-import org.facturasi.BACKend.daos.CategoriaDao;
 import org.facturasi.BACKend.daos.ProductoDao;
+import org.facturasi.BACKend.enumerados.Categoria;
 
 
 import java.util.List;
@@ -42,15 +41,12 @@ public class ProductoView extends Div {
     private boolean editable;
     Producto producto;
     //DAOs
-    ProductoDao pd = new ProductoDao();
-    CategoriaDao cd = new CategoriaDao();
+
     //Listas
     VirtualList<Producto> list;
-    private List<Producto> productos = pd.listarProductos();
-    private List<Categoria> categorias = cd.listarCategoria();
+    private List<Producto> productos = ProductoDao.listarProductos();
+
     // Campos de formulario
-    //int idProducto, String imageURL, String nombre, double precio, int stock, Categoria categoria, List<Detalle> detalles) {
-    //
     private IntegerField idField;
     private TextField imageUrlField;
     private TextField nombreField;
@@ -84,7 +80,7 @@ public class ProductoView extends Div {
                 //Botones editar y eliminar
                 Div botonesDiv = divBotones(producto);
                 cardLayout.add(botonesDiv);
-                //boton1.getStyle().set("color", "red");
+
                 return cardLayout;
             });
 
@@ -106,7 +102,7 @@ public class ProductoView extends Div {
         });
         Button deleteButton = new Button(new Icon(VaadinIcon.TRASH));
         deleteButton.addClickListener(e->{
-            pd.eliminarProducto(producto);
+            ProductoDao.eliminarProducto(producto);
             productos.remove(producto);
             actualizarLista();
         });
@@ -116,8 +112,11 @@ public class ProductoView extends Div {
 
     private HorizontalLayout panelButtons(){
         HorizontalLayout panelButtons = new HorizontalLayout();
-        Button addButton = new Button(new Icon(VaadinIcon.PLUS));
+        Button addButton = new Button("Crear");
+        addButton.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
         addButton.addClickListener(e->{
+            editable = false;
+            vaciarCampos();
             addProductForm.setVisible(true);
         });
         TextField searchButton = buscarProducto();
@@ -144,16 +143,14 @@ public class ProductoView extends Div {
             e.getValue();
         });
         categoriaMultiSelect.setItemLabelGenerator(Categoria::getNombre);
-        categoriaMultiSelect.setItems(cd.listarCategoria());
+        categoriaMultiSelect.setItems(Categoria.values());
         addProductForm.add(idField, imageUrlField, nombreField, imageUrlField, precioField,stockField, categoriaMultiSelect);
 
         aceptarModificacionCreacionButton.addClickListener(click -> {
             if (!editable) {
                 try {
-
-                    //String imageURL, String nombre, double precio, int stock, Categoria categoria
                     Producto producto = new Producto(imageUrlField.getValue(), nombreField.getValue(), precioField.getValue(), stockField.getValue(), categoriaMultiSelect.getValue());
-                    pd.guardarProducto(producto);
+                    ProductoDao.guardarProducto(producto);
                     productos.add(producto);
                     addProductFormVLayaut.setVisible(false);
                     vaciarCampos();
@@ -172,10 +169,11 @@ public class ProductoView extends Div {
                     producto.setCategoria(categoriaMultiSelect.getValue());
                     producto.setPrecio(precioField.getValue());
                     producto.setStock(stockField.getValue());
-                    pd.guardarProducto(producto);
-                    productos = pd.listarProductos();
+                    ProductoDao.guardarProducto(producto);
+                    productos = ProductoDao.listarProductos();
                     actualizarLista();
                     addProductFormVLayaut.setVisible(false);
+                    vaciarCampos();
                     Notification notification = Notification.show("Producto modificado correctamente");
                     notification.addThemeVariants(NotificationVariant.LUMO_SUCCESS);
 
@@ -210,6 +208,12 @@ public class ProductoView extends Div {
     }
 
     private void vaciarCampos() {
+        idField.clear();
+        imageUrlField.clear();
+        nombreField.clear();
+        precioField.clear();
+        stockField.clear();
+        categoriaMultiSelect.clear();
     }
     private TextField buscarProducto(){
         // Crear un TextField para la búsqueda
@@ -233,14 +237,18 @@ public class ProductoView extends Div {
     public ProductoView() {
         H1 title1 = new H1("Productos");
         title1.getStyle().set("1000", "var(--lumo-font-size-l)")
-                .set("margin", "0");
+                .set("margin", "10");
+        add(title1);
+        HorizontalLayout panelButtons = new HorizontalLayout();
+        panelButtons = panelButtons();
         list = new VirtualList<>();
         list.setItems(productos);
         list.setRenderer(productoCardRenderer);
         addProductForm = addProductForm();
         addProductForm.setVisible(false);
-        HorizontalLayout panelButtons = panelButtons();
+
         add(title1,panelButtons,addProductForm,list);
     }
+
 
 }

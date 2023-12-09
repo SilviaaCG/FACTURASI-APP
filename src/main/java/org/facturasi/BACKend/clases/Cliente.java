@@ -1,10 +1,10 @@
 package org.facturasi.BACKend.clases;
 
 import javax.persistence.*;
-import java.awt.*;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @Entity
 public class Cliente implements Serializable {
@@ -13,13 +13,12 @@ public class Cliente implements Serializable {
     @Column(name = "id_cliente")
     private int idCliente;
     String image;
-
     private String nombre;
 private  String apellidos;
 private String direccion;
 private  String correo;
 private int telefono;
-@OneToMany(mappedBy = "cliente", fetch = FetchType.EAGER,cascade = CascadeType.REMOVE )
+@OneToMany(mappedBy = "cliente", fetch = FetchType.EAGER,cascade = CascadeType.REMOVE)
 transient private List<Factura> facturas;
 
 public Cliente() {
@@ -101,4 +100,16 @@ public Cliente() {
         this.facturas = facturas;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Cliente cliente = (Cliente) o;
+        return idCliente == cliente.idCliente && telefono == cliente.telefono && image.equals(cliente.image) && nombre.equals(cliente.nombre) && apellidos.equals(cliente.apellidos) && direccion.equals(cliente.direccion) && correo.equals(cliente.correo) && facturas.equals(cliente.facturas);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(idCliente, image, nombre, apellidos, direccion, correo, telefono, facturas);
+    }
 }

@@ -1,11 +1,15 @@
 package org.facturasi.BACKend.clases;
 
+import org.facturasi.BACKend.enumerados.Categoria;
+
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @Entity
-public class Producto {
+public class Producto implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,10 +19,8 @@ public class Producto {
     private String nombre;
     private double precio;
     private int stock;
-    @ManyToOne
-    @JoinColumn(name = "id_categoria")
     private Categoria categoria;
-    @OneToMany(mappedBy = "producto")
+    @OneToMany(mappedBy = "producto",fetch = FetchType.EAGER ,cascade = CascadeType.REMOVE)
     private List<Detalle> detalles;
 
     public Producto(){
@@ -80,5 +82,18 @@ public class Producto {
     }
     public void setImageURL(String imageURL) {
         this.imageURL = imageURL;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Producto producto = (Producto) o;
+        return idProducto == producto.idProducto && Double.compare(producto.precio, precio) == 0 && stock == producto.stock && imageURL.equals(producto.imageURL) && nombre.equals(producto.nombre) && categoria == producto.categoria && detalles.equals(producto.detalles);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(idProducto, imageURL, nombre, precio, stock, categoria, detalles);
     }
 }

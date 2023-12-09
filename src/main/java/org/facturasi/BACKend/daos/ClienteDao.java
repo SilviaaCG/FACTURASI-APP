@@ -34,7 +34,6 @@ public class ClienteDao {
         }
         em.persist(cliente);
         LOGGER.info("Se ha guardado un nuevo cliente con el id " + cliente.getIdCliente());
-
         close();
     }
     public void eliminarCliente(Cliente cliente){
@@ -44,6 +43,7 @@ public class ClienteDao {
                 fd.eliminarFactura(factura);  // Actualizar la factura en la base de datos
             }
         });
+
         Cliente copiacliente = em.merge(cliente);
         em.remove(copiacliente);
 
@@ -57,20 +57,6 @@ public class ClienteDao {
         close();
         return clientes;
     }
-    /**public void modificarCliente( int idCliente, String nombre, String apellidos, String direccion, String duracion, Categoria categoria, Formato formato, Valoracion valoracion) {
-        setUp();
-        Pelicula pelicula = em.find(Pelicula.class, idPelicula);
-        pelicula.setTitulo(titulo);
-        pelicula.setDescripcion(descripcion);
-        pelicula.setAnyoPublicacion(anyo);
-        pelicula.setDuracion(duracion);
-        pelicula.setCategoria(categoria);
-        pelicula.setFormato(formato);
-        pelicula.setValoracion(valoracion);
-        pelicula = em.merge(pelicula);
-        em.persist(pelicula);
-        close();
-    }*/
 
 
 }

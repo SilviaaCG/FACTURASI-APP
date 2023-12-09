@@ -431,3 +431,430 @@ Número de factura: 3
 Número de factura: 4
 25-11-2023 22:31:30 INFO  DetalleDao:30 - Se ha guardado un nuevo detalle del producto Tarjeta gráfica RTX3060 a la factura número 3
 25-11-2023 22:31:30 INFO  DetalleDao:30 - Se ha guardado un nuevo detalle del producto Procesador Intel9 10343 a la factura número 3
+25-11-2023 23:13:26 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: er
+25-11-2023 23:13:28 INFO  ProductoDao:40 - Se ha eliminado la categoria con el nombre: Procesador Intel9 10343
+25-11-2023 23:13:29 INFO  ProductoDao:40 - Se ha eliminado la categoria con el nombre: Tarjeta gráfica RTX3060
+25-11-2023 23:14:14 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: er
+25-11-2023 23:14:28 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: er
+25-11-2023 23:17:55 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 1
+25-11-2023 23:18:06 INFO  ClienteDao:51 - Se ha eliminado el cliente con el id 1
+25-11-2023 23:18:11 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 2
+25-11-2023 23:18:13 INFO  ClienteDao:51 - Se ha eliminado el cliente con el id 2
+27-11-2023 09:33:02 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 3
+27-11-2023 09:34:12 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 3
+27-11-2023 09:51:29 INFO  FacturaDao:29 - Se ha guardado una nueva factura del cliente Paco.
+Número de factura: 1
+27-11-2023 10:16:27 INFO  ModoPagoDao:29 - Se ha guardado un nuevo modo de pago llamado: efectivo
+27-11-2023 10:16:27 INFO  ModoPagoDao:29 - Se ha guardado un nuevo modo de pago llamado: tarjeta visa
+27-11-2023 10:16:27 INFO  CategoriaDao:29 - Se ha guardado una nueva categoria con el nombre: Tarjetas graficas
+27-11-2023 10:16:28 INFO  CategoriaDao:29 - Se ha guardado una nueva categoria con el nombre: Procesadores
+27-11-2023 10:16:28 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: Tarjeta gráfica RTX3060
+27-11-2023 10:16:28 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: Procesador Intel9 10343
+27-11-2023 10:16:28 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 1
+27-11-2023 10:16:28 INFO  FacturaDao:29 - Se ha guardado una nueva factura del cliente Greis.
+Número de factura: 1
+27-11-2023 10:16:28 INFO  FacturaDao:29 - Se ha guardado una nueva factura del cliente Greis.
+Número de factura: 2
+27-11-2023 10:16:29 INFO  DetalleDao:30 - Se ha guardado un nuevo detalle del producto Tarjeta gráfica RTX3060 a la factura número 1
+27-11-2023 10:16:29 INFO  DetalleDao:30 - Se ha guardado un nuevo detalle del producto Procesador Intel9 10343 a la factura número 1
+27-11-2023 10:17:50 INFO  FacturaDao:29 - Se ha guardado una nueva factura del cliente Greis.
+Número de factura: 3
+27-11-2023 10:20:46 INFO  FacturaDao:36 - Se ha eliminado la factura número 1
+27-11-2023 10:20:58 INFO  FacturaDao:36 - Se ha eliminado la factura número 2
+27-11-2023 10:20:58 INFO  FacturaDao:36 - Se ha eliminado la factura número 3
+27-11-2023 10:20:58 INFO  ClienteDao:51 - Se ha eliminado el cliente con el id 1
+27-11-2023 14:19:19 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 2
+27-11-2023 14:21:09 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 3
+27-11-2023 14:21:29 INFO  FacturaDao:29 - Se ha guardado una nueva factura del cliente Paquita.
+Número de factura: 4
+27-11-2023 14:40:42 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 4
+27-11-2023 14:41:55 INFO  FacturaDao:29 - Se ha guardado una nueva factura del cliente Paquita.
+Número de factura: 5
+27-11-2023 15:02:16 INFO  ClienteDao:51 - Se ha eliminado el cliente con el id 4
+27-11-2023 16:03:06 INFO  FacturaDao:29 - Se ha guardado una nueva factura del cliente Paquita.
+Número de factura: 7
+27-11-2023 18:35:17 INFO  ModoPagoDao:29 - Se ha guardado un nuevo modo de pago llamado: efectivo
+27-11-2023 18:35:17 INFO  ModoPagoDao:29 - Se ha guardado un nuevo modo de pago llamado: tarjeta visa
+27-11-2023 18:35:18 INFO  CategoriaDao:29 - Se ha guardado una nueva categoria con el nombre: Tarjetas graficas
+27-11-2023 18:35:18 INFO  CategoriaDao:29 - Se ha guardado una nueva categoria con el nombre: Procesadores
+27-11-2023 18:35:18 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: Tarjeta gráfica RTX3060
+27-11-2023 18:35:18 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: Procesador Intel9 10343
+27-11-2023 18:35:18 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 1
+27-11-2023 18:35:19 INFO  FacturaDao:29 - Se ha guardado una nueva factura del cliente Greis.
+Número de factura: 1
+27-11-2023 18:35:19 INFO  FacturaDao:29 - Se ha guardado una nueva factura del cliente Greis.
+Número de factura: 2
+27-11-2023 18:35:19 INFO  DetalleDao:30 - Se ha guardado un nuevo detalle del producto Tarjeta gráfica RTX3060 a la factura número 1
+27-11-2023 18:35:19 INFO  DetalleDao:30 - Se ha guardado un nuevo detalle del producto Procesador Intel9 10343 a la factura número 1
+28-11-2023 20:16:38 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 1
+29-11-2023 13:56:15 INFO  FacturaDao:29 - Se ha guardado una nueva factura del cliente Greis.
+Número de factura: 3
+29-11-2023 14:01:49 INFO  FacturaDao:32 - Se ha guardado una nueva factura del cliente Greis.
+Número de factura: 1
+29-11-2023 14:02:01 INFO  FacturaDao:32 - Se ha guardado una nueva factura del cliente Greis.
+Número de factura: 2
+29-11-2023 14:04:03 INFO  FacturaDao:32 - Se ha guardado una nueva factura del cliente Greis.
+Número de factura: 3
+29-11-2023 14:04:06 INFO  FacturaDao:63 - YA ESTA PAGADO!!
+29-11-2023 15:28:55 INFO  FacturaDao:39 - Se ha eliminado la factura número 3
+30-11-2023 18:06:02 INFO  FacturaDao:39 - Se ha eliminado la factura número 1
+30-11-2023 18:06:02 INFO  FacturaDao:39 - Se ha eliminado la factura número 2
+30-11-2023 18:06:02 INFO  ClienteDao:51 - Se ha eliminado el cliente con el id 1
+30-11-2023 18:46:45 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 2
+30-11-2023 18:46:53 INFO  FacturaDao:32 - Se ha guardado una nueva factura del cliente Silvia.
+Número de factura: 4
+30-11-2023 18:48:29 INFO  FacturaDao:32 - Se ha guardado una nueva factura del cliente Silvia.
+Número de factura: 4
+30-11-2023 18:48:31 INFO  FacturaDao:63 - YA ESTA PAGADO!!
+30-11-2023 18:48:53 INFO  FacturaDao:32 - Se ha guardado una nueva factura del cliente Silvia.
+Número de factura: 5
+30-11-2023 18:49:19 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 3
+30-11-2023 18:49:28 INFO  FacturaDao:32 - Se ha guardado una nueva factura del cliente greis.
+Número de factura: 6
+30-11-2023 18:49:37 INFO  FacturaDao:32 - Se ha guardado una nueva factura del cliente greis.
+Número de factura: 6
+30-11-2023 18:49:37 INFO  FacturaDao:63 - YA ESTA PAGADO!!
+30-11-2023 19:00:11 INFO  DetalleDao:37 - Se ha eliminado el detalle con número 3
+30-11-2023 19:00:14 INFO  FacturaDao:32 - Se ha guardado una nueva factura del cliente Silvia.
+Número de factura: 5
+30-11-2023 19:00:14 INFO  FacturaDao:63 - YA ESTA PAGADO!!
+30-11-2023 20:54:42 INFO  ProductoDao:40 - Se ha eliminado la categoria con el nombre: Tarjeta gráfica RTX3060
+30-11-2023 20:55:09 INFO  DetalleDao:37 - Se ha eliminado el detalle con número 4
+30-11-2023 20:55:54 INFO  FacturaDao:32 - Se ha guardado una nueva factura del cliente greis.
+Número de factura: 7
+30-11-2023 20:56:28 INFO  FacturaDao:32 - Se ha guardado una nueva factura del cliente greis.
+Número de factura: 7
+30-11-2023 20:56:28 INFO  FacturaDao:63 - YA ESTA PAGADO!!
+30-11-2023 21:17:24 INFO  FacturaDao:39 - Se ha eliminado la factura número 6
+30-11-2023 21:17:26 INFO  FacturaDao:39 - Se ha eliminado la factura número 7
+30-11-2023 21:17:47 INFO  FacturaDao:32 - Se ha guardado una nueva factura del cliente greis.
+Número de factura: 8
+30-11-2023 21:33:29 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: caca
+30-11-2023 21:34:04 INFO  FacturaDao:32 - Se ha guardado una nueva factura del cliente greis.
+Número de factura: 8
+30-11-2023 21:34:04 INFO  FacturaDao:63 - YA ESTA PAGADO!!
+30-11-2023 21:36:25 INFO  FacturaDao:32 - Se ha guardado una nueva factura del cliente greis.
+Número de factura: 9
+30-11-2023 22:00:57 INFO  FacturaDao:32 - Se ha guardado una nueva factura del cliente greis.
+Número de factura: 9
+30-11-2023 22:00:58 INFO  FacturaDao:63 - YA ESTA PAGADO!!
+30-11-2023 22:12:02 INFO  FacturaDao:32 - Se ha guardado una nueva factura del cliente greis.
+Número de factura: 10
+30-11-2023 22:12:09 INFO  FacturaDao:32 - Se ha guardado una nueva factura del cliente greis.
+Número de factura: 10
+30-11-2023 22:12:10 INFO  FacturaDao:63 - YA ESTA PAGADO!!
+30-11-2023 22:18:38 INFO  FacturaDao:32 - Se ha guardado una nueva factura del cliente greis.
+Número de factura: 11
+30-11-2023 22:18:55 INFO  FacturaDao:32 - Se ha guardado una nueva factura del cliente greis.
+Número de factura: 11
+30-11-2023 22:18:55 INFO  FacturaDao:63 - YA ESTA PAGADO!!
+30-11-2023 22:28:42 INFO  FacturaDao:39 - Se ha eliminado la factura número 4
+30-11-2023 22:28:42 INFO  FacturaDao:39 - Se ha eliminado la factura número 5
+30-11-2023 22:28:44 INFO  FacturaDao:39 - Se ha eliminado la factura número 8
+30-11-2023 22:28:44 INFO  FacturaDao:39 - Se ha eliminado la factura número 9
+30-11-2023 22:28:46 INFO  FacturaDao:39 - Se ha eliminado la factura número 10
+30-11-2023 22:28:55 INFO  FacturaDao:32 - Se ha guardado una nueva factura del cliente greis.
+Número de factura: 12
+30-11-2023 22:29:12 INFO  FacturaDao:32 - Se ha guardado una nueva factura del cliente greis.
+Número de factura: 12
+30-11-2023 22:29:12 INFO  FacturaDao:63 - YA ESTA PAGADO!!
+30-11-2023 22:29:22 INFO  FacturaDao:39 - Se ha eliminado la factura número 11
+30-11-2023 22:29:23 INFO  FacturaDao:39 - Se ha eliminado la factura número 12
+30-11-2023 22:29:23 INFO  ClienteDao:51 - Se ha eliminado el cliente con el id 3
+30-11-2023 22:29:38 INFO  FacturaDao:32 - Se ha guardado una nueva factura del cliente Silvia.
+Número de factura: 13
+30-11-2023 22:29:44 INFO  ProductoDao:40 - Se ha eliminado la categoria con el nombre: Procesador Intel9 10343
+30-11-2023 22:29:45 INFO  ProductoDao:40 - Se ha eliminado la categoria con el nombre: caca
+30-11-2023 22:37:45 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: Tarjeta
+30-11-2023 22:38:23 INFO  FacturaDao:32 - Se ha guardado una nueva factura del cliente Silvia.
+Número de factura: 13
+30-11-2023 22:38:23 INFO  FacturaDao:63 - YA ESTA PAGADO!!
+30-11-2023 22:45:37 INFO  FacturaDao:32 - Se ha guardado una nueva factura del cliente Silvia.
+Número de factura: 14
+30-11-2023 22:52:58 INFO  FacturaDao:32 - Se ha guardado una nueva factura del cliente Silvia.
+Número de factura: 14
+30-11-2023 22:52:58 INFO  FacturaDao:63 - YA ESTA PAGADO!!
+30-11-2023 23:03:02 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 2
+30-11-2023 23:04:15 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: Tarjeta
+01-12-2023 16:27:11 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 4
+01-12-2023 16:27:14 INFO  FacturaDao:39 - Se ha eliminado la factura número 13
+01-12-2023 16:27:14 INFO  FacturaDao:39 - Se ha eliminado la factura número 14
+01-12-2023 16:27:14 INFO  ClienteDao:51 - Se ha eliminado el cliente con el id 2
+01-12-2023 16:27:15 INFO  ClienteDao:51 - Se ha eliminado el cliente con el id 4
+01-12-2023 16:27:48 INFO  ProductoDao:40 - Se ha eliminado la categoria con el nombre: Tarjeta
+01-12-2023 20:44:22 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 5
+01-12-2023 20:45:03 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: caca
+01-12-2023 20:45:08 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: caca
+01-12-2023 20:45:11 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: caca
+01-12-2023 20:45:32 INFO  FacturaDao:32 - Se ha guardado una nueva factura del cliente d.
+Número de factura: 15
+01-12-2023 20:45:37 INFO  FacturaDao:32 - Se ha guardado una nueva factura del cliente d.
+Número de factura: 16
+01-12-2023 20:46:25 INFO  FacturaDao:32 - Se ha guardado una nueva factura del cliente d.
+Número de factura: 15
+01-12-2023 20:46:25 INFO  FacturaDao:63 - YA ESTA PAGADO!!
+01-12-2023 20:46:58 INFO  ProductoDao:40 - Se ha eliminado la categoria con el nombre: caca
+01-12-2023 20:46:59 INFO  ProductoDao:40 - Se ha eliminado la categoria con el nombre: caca
+01-12-2023 20:47:00 INFO  ProductoDao:40 - Se ha eliminado la categoria con el nombre: caca
+01-12-2023 20:47:30 INFO  FacturaDao:39 - Se ha eliminado la factura número 15
+01-12-2023 20:47:30 INFO  FacturaDao:39 - Se ha eliminado la factura número 16
+01-12-2023 20:47:30 INFO  ClienteDao:51 - Se ha eliminado el cliente con el id 5
+01-12-2023 20:48:19 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 6
+01-12-2023 20:48:33 INFO  FacturaDao:32 - Se ha guardado una nueva factura del cliente f.
+Número de factura: 17
+01-12-2023 20:50:19 INFO  FacturaDao:32 - Se ha guardado una nueva factura del cliente f.
+Número de factura: 17
+01-12-2023 20:50:19 INFO  FacturaDao:63 - YA ESTA PAGADO!!
+02-12-2023 09:45:03 INFO  FacturaDao:38 - Se ha eliminado la factura número 17
+02-12-2023 09:45:03 INFO  ClienteDao:51 - Se ha eliminado el cliente con el id 6
+02-12-2023 09:46:26 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 7
+02-12-2023 09:49:04 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: ASUS Dual Radeon RX 7600 OC Edition 8GB GDDR6
+02-12-2023 09:50:15 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: Zotac Gaming Geforce RTX 3080 TRINITY OC LHR 10GB GDDR6X
+02-12-2023 09:51:24 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: AMD Ryzen 5 5600X 3.7GHz
+02-12-2023 09:57:47 INFO  FacturaDao:31 - Se ha guardado una nueva factura del cliente Greis.
+Número de factura: 18
+02-12-2023 09:57:58 INFO  FacturaDao:38 - Se ha eliminado la factura número 18
+02-12-2023 09:58:19 INFO  FacturaDao:31 - Se ha guardado una nueva factura del cliente Greis.
+Número de factura: 19
+02-12-2023 09:58:32 INFO  FacturaDao:38 - Se ha eliminado la factura número 19
+02-12-2023 09:58:34 INFO  FacturaDao:31 - Se ha guardado una nueva factura del cliente Greis.
+Número de factura: 20
+02-12-2023 09:58:37 INFO  FacturaDao:38 - Se ha eliminado la factura número 20
+02-12-2023 09:58:45 INFO  FacturaDao:31 - Se ha guardado una nueva factura del cliente Greis.
+Número de factura: 21
+02-12-2023 09:59:01 INFO  FacturaDao:38 - Se ha eliminado la factura número 21
+02-12-2023 09:59:07 INFO  FacturaDao:31 - Se ha guardado una nueva factura del cliente Greis.
+Número de factura: 22
+04-12-2023 21:47:19 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 7
+04-12-2023 21:48:08 INFO  FacturaDao:31 - Se ha guardado una nueva factura del cliente Greis.
+Número de factura: 23
+04-12-2023 21:48:11 INFO  FacturaDao:38 - Se ha eliminado la factura número 23
+05-12-2023 07:27:21 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 7
+05-12-2023 17:08:24 INFO  FacturaDao:31 - Se ha guardado una nueva factura del cliente Greis.
+Número de factura: 22
+05-12-2023 17:08:26 INFO  FacturaDao:62 - YA ESTA PAGADO!!
+05-12-2023 17:08:43 INFO  FacturaDao:31 - Se ha guardado una nueva factura del cliente Greis.
+Número de factura: 24
+05-12-2023 17:08:59 INFO  FacturaDao:31 - Se ha guardado una nueva factura del cliente Greis.
+Número de factura: 24
+05-12-2023 17:08:59 INFO  FacturaDao:62 - YA ESTA PAGADO!!
+05-12-2023 17:13:01 INFO  FacturaDao:31 - Se ha guardado una nueva factura del cliente Greis.
+Número de factura: 25
+05-12-2023 17:16:49 INFO  FacturaDao:31 - Se ha guardado una nueva factura del cliente Greis.
+Número de factura: 25
+05-12-2023 17:16:49 INFO  FacturaDao:62 - YA ESTA PAGADO!!
+06-12-2023 14:54:57 INFO  FacturaDao:38 - Se ha eliminado la factura número 22
+06-12-2023 14:54:58 INFO  FacturaDao:38 - Se ha eliminado la factura número 24
+06-12-2023 14:54:59 INFO  FacturaDao:38 - Se ha eliminado la factura número 25
+06-12-2023 14:55:06 INFO  FacturaDao:31 - Se ha guardado una nueva factura del cliente Greis.
+Número de factura: 26
+06-12-2023 14:55:22 INFO  FacturaDao:31 - Se ha guardado una nueva factura del cliente Greis.
+Número de factura: 26
+06-12-2023 14:59:30 INFO  FacturaDao:31 - Se ha guardado una nueva factura del cliente Greis.
+Número de factura: 27
+06-12-2023 15:07:22 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 1
+06-12-2023 15:29:21 INFO  FacturaDao:31 - Se ha guardado una nueva factura del cliente Silvia.
+Número de factura: 1
+06-12-2023 15:45:07 INFO  FacturaDao:31 - Se ha guardado una nueva factura del cliente Silvia.
+Número de factura: 1
+06-12-2023 15:45:07 INFO  FacturaDao:62 - YA ESTA PAGADO!!
+06-12-2023 15:46:29 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 2
+06-12-2023 15:48:55 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: Trjeta gráfica
+06-12-2023 15:49:10 INFO  FacturaDao:38 - Se ha eliminado la factura número 1
+06-12-2023 15:49:19 INFO  FacturaDao:31 - Se ha guardado una nueva factura del cliente Pablo.
+Número de factura: 2
+06-12-2023 15:49:49 INFO  FacturaDao:31 - Se ha guardado una nueva factura del cliente Pablo.
+Número de factura: 2
+06-12-2023 15:55:22 INFO  FacturaDao:38 - Se ha eliminado la factura número 2
+06-12-2023 15:55:31 INFO  FacturaDao:31 - Se ha guardado una nueva factura del cliente Pablo.
+Número de factura: 3
+06-12-2023 15:55:40 INFO  DetalleDao:30 - Se ha guardado un nuevo detalle del producto Trjeta gráfica a la factura número 3
+06-12-2023 15:55:42 INFO  FacturaDao:31 - Se ha guardado una nueva factura del cliente Pablo.
+Número de factura: 3
+06-12-2023 15:55:44 INFO  FacturaDao:62 - YA ESTA PAGADO!!
+07-12-2023 19:31:30 INFO  FacturaDao:31 - Se ha guardado una nueva factura del cliente Pablo.
+Número de factura: 4
+07-12-2023 19:31:37 INFO  DetalleDao:30 - Se ha guardado un nuevo detalle del producto Trjeta gráfica a la factura número 4
+07-12-2023 19:31:41 INFO  DetalleDao:30 - Se ha guardado un nuevo detalle del producto Trjeta gráfica a la factura número 4
+07-12-2023 19:31:43 INFO  DetalleDao:30 - Se ha guardado un nuevo detalle del producto Trjeta gráfica a la factura número 4
+07-12-2023 19:31:46 INFO  FacturaDao:31 - Se ha guardado una nueva factura del cliente Pablo.
+Número de factura: 4
+07-12-2023 19:31:48 INFO  FacturaDao:62 - YA ESTA PAGADO!!
+08-12-2023 17:52:46 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 1
+09-12-2023 11:06:05 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 1
+09-12-2023 11:06:32 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: Trjeta gráfica 
+09-12-2023 11:07:11 INFO  FacturaDao:31 - Se ha guardado una nueva factura del cliente Pablo.
+Número de factura: 1
+09-12-2023 11:07:22 INFO  DetalleDao:30 - Se ha guardado un nuevo detalle del producto Trjeta gráfica  a la factura número 1
+09-12-2023 11:07:24 INFO  FacturaDao:31 - Se ha guardado una nueva factura del cliente Pablo.
+Número de factura: 1
+09-12-2023 11:07:26 INFO  FacturaDao:62 - YA ESTA PAGADO!!
+09-12-2023 11:13:22 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 2
+09-12-2023 11:14:18 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 1
+09-12-2023 11:15:16 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: Trjeta gráfica
+09-12-2023 11:15:55 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: Trjeta gráfica
+09-12-2023 11:16:38 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: Trjeta gráfica
+09-12-2023 11:22:52 INFO  ProductoDao:40 - Se ha eliminado la categoria con el nombre: Trjeta gráfica 
+09-12-2023 11:22:54 INFO  ProductoDao:40 - Se ha eliminado la categoria con el nombre: Trjeta gráfica
+09-12-2023 11:22:55 INFO  ProductoDao:40 - Se ha eliminado la categoria con el nombre: Trjeta gráfica
+09-12-2023 11:23:32 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: Trjeta gráfica 
+09-12-2023 11:23:41 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: Trjeta gráfica 
+09-12-2023 11:23:52 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: Trjeta gráfica 
+09-12-2023 11:27:54 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: Trjeta gráfica 
+09-12-2023 11:29:34 INFO  ProductoDao:40 - Se ha eliminado la categoria con el nombre: Trjeta gráfica 
+09-12-2023 11:29:36 INFO  ProductoDao:40 - Se ha eliminado la categoria con el nombre: Trjeta gráfica 
+09-12-2023 11:29:59 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: Trjeta gráfica 
+09-12-2023 11:30:06 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: Trjeta gráfica 
+09-12-2023 11:34:58 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: Trjeta gráfica 
+09-12-2023 11:39:26 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: de
+09-12-2023 11:40:49 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: s
+09-12-2023 11:41:05 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: sfrgafda
+09-12-2023 11:41:11 INFO  ProductoDao:40 - Se ha eliminado la categoria con el nombre: de
+09-12-2023 11:41:12 INFO  ProductoDao:40 - Se ha eliminado la categoria con el nombre: sfrgafda
+09-12-2023 11:42:57 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: targeta gráfica
+09-12-2023 11:43:24 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: targeta gráfica
+09-12-2023 11:43:59 INFO  FacturaDao:31 - Se ha guardado una nueva factura del cliente Silvia.
+Número de factura: 2
+09-12-2023 11:44:18 INFO  DetalleDao:30 - Se ha guardado un nuevo detalle del producto targeta gráfica a la factura número 2
+09-12-2023 11:44:32 INFO  FacturaDao:31 - Se ha guardado una nueva factura del cliente Silvia.
+Número de factura: 2
+09-12-2023 11:44:32 INFO  FacturaDao:62 - YA ESTA PAGADO!!
+09-12-2023 11:45:36 INFO  FacturaDao:38 - Se ha eliminado la factura número 2
+09-12-2023 11:45:36 INFO  ClienteDao:51 - Se ha eliminado el cliente con el id 2
+09-12-2023 11:46:13 INFO  FacturaDao:38 - Se ha eliminado la factura número 1
+09-12-2023 11:48:11 INFO  FacturaDao:31 - Se ha guardado una nueva factura del cliente Greis.
+Número de factura: 3
+09-12-2023 11:48:22 INFO  DetalleDao:30 - Se ha guardado un nuevo detalle del producto targeta gráfica a la factura número 3
+09-12-2023 11:48:22 INFO  DetalleDao:30 - Se ha guardado un nuevo detalle del producto targeta gráfica a la factura número 3
+09-12-2023 11:48:26 INFO  FacturaDao:31 - Se ha guardado una nueva factura del cliente Greis.
+Número de factura: 3
+09-12-2023 11:48:26 INFO  FacturaDao:62 - YA ESTA PAGADO!!
+09-12-2023 11:48:57 INFO  FacturaDao:38 - Se ha eliminado la factura número 3
+09-12-2023 11:48:57 INFO  ClienteDao:51 - Se ha eliminado el cliente con el id 1
+09-12-2023 11:51:59 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 3
+09-12-2023 12:17:45 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 1
+09-12-2023 12:19:07 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: targeta gráfica 
+09-12-2023 12:19:47 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: ASUS Dual Radeon RX 7600 OC Edition 8GB GDDR6 
+09-12-2023 12:19:59 INFO  FacturaDao:31 - Se ha guardado una nueva factura del cliente Greis.
+Número de factura: 1
+09-12-2023 12:20:08 INFO  DetalleDao:30 - Se ha guardado un nuevo detalle del producto targeta gráfica  a la factura número 1
+09-12-2023 12:20:10 INFO  FacturaDao:31 - Se ha guardado una nueva factura del cliente Greis.
+Número de factura: 1
+09-12-2023 12:20:10 INFO  FacturaDao:62 - YA ESTA PAGADO!!
+09-12-2023 12:20:18 INFO  FacturaDao:38 - Se ha eliminado la factura número 1
+09-12-2023 12:30:06 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 1
+09-12-2023 12:32:08 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: targeta gráfica  
+09-12-2023 12:32:21 INFO  FacturaDao:31 - Se ha guardado una nueva factura del cliente Greis.
+Número de factura: 1
+09-12-2023 12:32:30 INFO  DetalleDao:30 - Se ha guardado un nuevo detalle del producto targeta gráfica   a la factura número 1
+09-12-2023 12:32:33 INFO  FacturaDao:31 - Se ha guardado una nueva factura del cliente Greis.
+Número de factura: 1
+09-12-2023 12:32:33 INFO  FacturaDao:62 - YA ESTA PAGADO!!
+09-12-2023 12:32:50 INFO  FacturaDao:38 - Se ha eliminado la factura número 1
+09-12-2023 12:41:11 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: Tarjeta gráfica RTX3060
+09-12-2023 12:41:11 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: Procesador Intel9 10343
+09-12-2023 12:41:11 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 2
+09-12-2023 12:41:11 INFO  FacturaDao:31 - Se ha guardado una nueva factura del cliente Greis.
+Número de factura: 2
+09-12-2023 12:41:12 INFO  FacturaDao:31 - Se ha guardado una nueva factura del cliente Greis.
+Número de factura: 3
+09-12-2023 12:41:12 INFO  DetalleDao:30 - Se ha guardado un nuevo detalle del producto Tarjeta gráfica RTX3060 a la factura número 2
+09-12-2023 12:41:12 INFO  DetalleDao:30 - Se ha guardado un nuevo detalle del producto Procesador Intel9 10343 a la factura número 2
+09-12-2023 14:46:52 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 1
+09-12-2023 14:47:05 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: EW
+09-12-2023 14:47:11 INFO  FacturaDao:31 - Se ha guardado una nueva factura del cliente SILVIA.
+Número de factura: 1
+09-12-2023 14:47:18 INFO  FacturaDao:31 - Se ha guardado una nueva factura del cliente SILVIA.
+Número de factura: 2
+09-12-2023 14:47:22 INFO  FacturaDao:38 - Se ha eliminado la factura número 1
+09-12-2023 14:47:22 INFO  FacturaDao:38 - Se ha eliminado la factura número 2
+09-12-2023 14:47:22 INFO  ClienteDao:51 - Se ha eliminado el cliente con el id 1
+09-12-2023 14:47:46 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 2
+09-12-2023 14:47:54 INFO  FacturaDao:31 - Se ha guardado una nueva factura del cliente SILVIA .
+Número de factura: 3
+09-12-2023 14:48:01 INFO  DetalleDao:30 - Se ha guardado un nuevo detalle del producto EW a la factura número 3
+09-12-2023 14:48:14 INFO  FacturaDao:38 - Se ha eliminado la factura número 3
+09-12-2023 14:50:52 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 1
+09-12-2023 14:51:03 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: D
+09-12-2023 14:51:09 INFO  FacturaDao:31 - Se ha guardado una nueva factura del cliente E.
+Número de factura: 1
+09-12-2023 14:51:16 INFO  DetalleDao:30 - Se ha guardado un nuevo detalle del producto D a la factura número 1
+09-12-2023 14:53:32 INFO  ClienteDao:51 - Se ha eliminado el cliente con el id 1
+09-12-2023 15:00:44 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 1
+09-12-2023 15:00:55 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: f
+09-12-2023 15:01:07 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: 43
+09-12-2023 15:01:15 INFO  FacturaDao:33 - Se ha guardado una nueva factura del cliente E .
+Número de factura: 1
+09-12-2023 15:01:23 INFO  DetalleDao:30 - Se ha guardado un nuevo detalle del producto f a la factura número 1
+09-12-2023 15:01:29 INFO  DetalleDao:38 - Se ha eliminado el detalle con número 1
+09-12-2023 15:01:29 INFO  FacturaDao:44 - Se ha eliminado la factura número 1
+09-12-2023 15:01:38 INFO  ClienteDao:51 - Se ha eliminado el cliente con el id 1
+09-12-2023 15:01:57 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 2
+09-12-2023 15:02:05 INFO  FacturaDao:33 - Se ha guardado una nueva factura del cliente E f.
+Número de factura: 2
+09-12-2023 15:02:12 INFO  DetalleDao:30 - Se ha guardado un nuevo detalle del producto 43 a la factura número 2
+09-12-2023 15:02:12 INFO  DetalleDao:30 - Se ha guardado un nuevo detalle del producto 43 a la factura número 2
+09-12-2023 15:02:14 INFO  FacturaDao:33 - Se ha guardado una nueva factura del cliente E f.
+Número de factura: 2
+09-12-2023 15:02:14 INFO  FacturaDao:68 - YA ESTA PAGADO!!
+09-12-2023 15:02:18 INFO  DetalleDao:38 - Se ha eliminado el detalle con número 2
+09-12-2023 15:02:18 INFO  DetalleDao:38 - Se ha eliminado el detalle con número 3
+09-12-2023 15:02:18 INFO  FacturaDao:44 - Se ha eliminado la factura número 2
+09-12-2023 15:02:18 INFO  ClienteDao:51 - Se ha eliminado el cliente con el id 2
+09-12-2023 15:03:46 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 3
+09-12-2023 15:03:52 INFO  FacturaDao:33 - Se ha guardado una nueva factura del cliente E fe.
+Número de factura: 3
+09-12-2023 15:03:58 INFO  DetalleDao:30 - Se ha guardado un nuevo detalle del producto f a la factura número 3
+09-12-2023 15:04:00 INFO  FacturaDao:33 - Se ha guardado una nueva factura del cliente E fe.
+Número de factura: 3
+09-12-2023 15:04:01 INFO  FacturaDao:68 - YA ESTA PAGADO!!
+09-12-2023 15:04:06 INFO  ProductoDao:40 - Se ha eliminado la categoria con el nombre: f
+09-12-2023 15:08:21 INFO  FacturaDao:44 - Se ha eliminado la factura número 3
+09-12-2023 15:08:33 INFO  FacturaDao:33 - Se ha guardado una nueva factura del cliente E fe.
+Número de factura: 4
+09-12-2023 15:08:38 INFO  DetalleDao:30 - Se ha guardado un nuevo detalle del producto 43 a la factura número 4
+09-12-2023 15:08:39 INFO  FacturaDao:33 - Se ha guardado una nueva factura del cliente E fe.
+Número de factura: 4
+09-12-2023 15:08:39 INFO  FacturaDao:68 - YA ESTA PAGADO!!
+09-12-2023 15:08:42 INFO  DetalleDao:38 - Se ha eliminado el detalle con número 5
+09-12-2023 15:08:42 INFO  FacturaDao:44 - Se ha eliminado la factura número 4
+09-12-2023 15:09:29 INFO  ClienteDao:51 - Se ha eliminado el cliente con el id 3
+09-12-2023 15:09:32 INFO  ProductoDao:40 - Se ha eliminado la categoria con el nombre: 43
+09-12-2023 15:11:04 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 4
+09-12-2023 15:11:44 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 4
+09-12-2023 15:12:24 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: Tarjeta gráfica
+09-12-2023 15:12:48 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: Tarjeta gráfica
+09-12-2023 15:13:07 INFO  FacturaDao:33 - Se ha guardado una nueva factura del cliente Greis .
+Número de factura: 5
+09-12-2023 15:13:28 INFO  DetalleDao:30 - Se ha guardado un nuevo detalle del producto Tarjeta gráfica a la factura número 5
+09-12-2023 15:13:39 INFO  FacturaDao:33 - Se ha guardado una nueva factura del cliente Greis .
+Número de factura: 5
+09-12-2023 15:13:39 INFO  FacturaDao:68 - YA ESTA PAGADO!!
+09-12-2023 15:18:41 INFO  DetalleDao:38 - Se ha eliminado el detalle con número 6
+09-12-2023 15:18:41 INFO  FacturaDao:44 - Se ha eliminado la factura número 5
+09-12-2023 15:18:41 INFO  ClienteDao:51 - Se ha eliminado el cliente con el id 4
+09-12-2023 15:21:47 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 5
+09-12-2023 15:21:57 INFO  FacturaDao:33 - Se ha guardado una nueva factura del cliente Greis  .
+Número de factura: 6
+09-12-2023 15:22:07 INFO  DetalleDao:30 - Se ha guardado un nuevo detalle del producto Tarjeta gráfica a la factura número 6
+09-12-2023 15:22:20 INFO  DetalleDao:38 - Se ha eliminado el detalle con número 7
+09-12-2023 15:22:20 INFO  FacturaDao:44 - Se ha eliminado la factura número 6
+09-12-2023 15:22:20 INFO  ClienteDao:51 - Se ha eliminado el cliente con el id 5
+09-12-2023 16:07:12 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 6
+09-12-2023 16:07:19 INFO  FacturaDao:33 - Se ha guardado una nueva factura del cliente Greis   .
+Número de factura: 7
+09-12-2023 16:07:26 INFO  DetalleDao:30 - Se ha guardado un nuevo detalle del producto Tarjeta gráfica a la factura número 7
+09-12-2023 16:07:42 INFO  ClienteDao:51 - Se ha eliminado el cliente con el id 6
+09-12-2023 16:57:02 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 1
+09-12-2023 16:57:26 INFO  ClienteDao:36 - Se ha guardado un nuevo cliente con el id 1
+09-12-2023 16:58:07 INFO  ProductoDao:33 - Se ha guardado un nuevo producto con el nombre: Tarjeta gráfica 
+09-12-2023 16:58:37 INFO  FacturaDao:33 - Se ha guardado una nueva factura del cliente Greis     .
+Número de factura: 1
+09-12-2023 16:58:51 INFO  DetalleDao:30 - Se ha guardado un nuevo detalle del producto Tarjeta gráfica  a la factura número 1
+09-12-2023 16:59:14 INFO  FacturaDao:33 - Se ha guardado una nueva factura del cliente Greis     .
+Número de factura: 1
+09-12-2023 16:59:14 INFO  FacturaDao:68 - YA ESTA PAGADO!!
+09-12-2023 16:59:35 INFO  DetalleDao:38 - Se ha eliminado el detalle con número 1
+09-12-2023 16:59:35 INFO  FacturaDao:44 - Se ha eliminado la factura número 1
+09-12-2023 16:59:35 INFO  ClienteDao:50 - Se ha eliminado el cliente con el id 1
+09-12-2023 16:59:55 INFO  ProductoDao:40 - Se ha eliminado la categoria con el nombre: Tarjeta gráfica 
